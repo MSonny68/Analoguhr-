@@ -24,7 +24,7 @@ sec_dot.style.transform = `rotateZ(${s * 6}deg)`;
 // 360 grad / 60 minuten = 6
 min_dot.style.transform = `rotateZ(${m * 6}deg)`;
 // 360 grad / 12 stunden = 30
-hr_dot.style.transform = `rotateZ(${h * 30}deg)`;
+hr_dot.style.transform = `rotateZ(${h * 30}deg * 2)`;// * 2 wegen 24 stunden
 
 //zeiger bewegen
 hr.style.transform = `rotateZ(${h * 30}deg)`;

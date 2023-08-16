@@ -94,8 +94,8 @@ body
 }
 #time .circle:nth-child(3) svg circle
 {
-    stroke-dasharray: 510;
-    stroke-dashoffset: 510;
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
 }
 .dots
 {

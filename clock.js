@@ -14,7 +14,11 @@ let m = new Date().getMinutes();
 let s = new Date().getSeconds();
 
 // 12 stunden uhr
-hh.style.strokeDashoffset = 510 - (510 * h) / 12;
+if(h>=12){
+    h = h-12;
+}
+hh.style.strokeDashoffset = 500 - (((500 * h+ m*7)  / 12) );
+console.log(500 - ((500 * h +m*7) / 12 ));
 // 60 minuten
 mm.style.strokeDashoffset = 630 - (630 * m) / 60;
 // 60 sekunden
@@ -24,10 +28,14 @@ sec_dot.style.transform = `rotateZ(${s * 6}deg)`;
 // 360 grad / 60 minuten = 6
 min_dot.style.transform = `rotateZ(${m * 6}deg)`;
 // 360 grad / 12 stunden = 30
-hr_dot.style.transform = `rotateZ(${h * 30}deg)`;
+
+hr_dot.style.transform = `rotateZ(${(h * 30) + (m/2)}deg)`;
+
+
 
 //zeiger bewegen
-hr.style.transform = `rotateZ(${h * 30}deg )`;
+
+hr.style.transform = `rotateZ(${(h * 30 + m/2)}deg)`;
 mn.style.transform = `rotateZ(${m * 6}deg)`;
 sc.style.transform = `rotateZ(${s * 6}deg)`;
 
